@@ -2,7 +2,7 @@
   <div class="home">
     <h1>Weather App</h1>
     <div class="enter-city">
-      <input type="text" placeholder="Enter a city">
+      <input @keyup.enter="getWeather" v-model="data.city" type="text" placeholder="Enter a city">
     </div>
     <div class="weather">
       <h1>6&deg;</h1>
@@ -12,8 +12,23 @@
   </div>
 </template>
 <script>
+import { reactive } from "vue"
 export default {
-  name: "Home"
+  setup() {
+    let data = reactive({
+      city: '',
+      weather: null
+    })
+
+    const getWeather = () => {
+      console.log('getWeather')
+    }
+
+    return {
+      data,
+      getWeather,
+    }
+  }
 }
 </script>
 
