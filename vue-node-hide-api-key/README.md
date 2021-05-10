@@ -1,19 +1,16 @@
-# vue-node-hide-api-key
+## BACKEND SETUP
 
-## Project setup
-```
-npm install
-```
+For this project you need both, backend and front end running at the same time
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+You are going to need an api key running too, to run your the application on your app
 
-### Compiles and minifies for production
-```
-npm run build
-```
+How to do that: ✍️
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+    - In the backend folder, rename .env.sample to .env and run all of them
+    - generate api key at opeweathermap.com, and add your key
+    - to the API key constant to the .env
+    - npm install
+    - cd to the folder
+    - launch backend
+    -launch front end
+    - Enjoy it
