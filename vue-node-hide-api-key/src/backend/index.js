@@ -5,6 +5,7 @@ const app = express()
 // and opening it on this port
 const port = 3000
 
+// const apiUrl = 'http://api.openweathermap.org/data/2.5/weather'
 // creating endpoint, to return something
 app.get('/', (req, res) => {
     res.send('Hello ROkas!')
