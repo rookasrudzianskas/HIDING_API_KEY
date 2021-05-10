@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>Weather App</h1>
+    <h1>Rookas Weather App</h1>
     <div class="enter-city">
       <input @keyup.enter="getWeather" v-model="data.city" type="text" placeholder="Enter a city">
     </div>
@@ -17,7 +17,7 @@ import axios from "axios"
 export default {
   setup() {
     let data = reactive({
-      city: 'london',
+      city: '',
       weather: null
     })
 
