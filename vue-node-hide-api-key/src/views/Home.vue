@@ -13,6 +13,7 @@
 </template>
 <script>
 import { reactive } from "vue"
+import axios from "axios"
 export default {
   setup() {
     let data = reactive({
@@ -21,7 +22,9 @@ export default {
     })
 
     const getWeather = () => {
-      console.log('getWeather')
+      axios('http://api.openweathermap.org/data/2.5/weather?units=metric&q=london&appid=7072edc8ba7df4103c3a2efc6061be00').then(response => {
+        console.log(response);
+      })
     }
 
     return {
