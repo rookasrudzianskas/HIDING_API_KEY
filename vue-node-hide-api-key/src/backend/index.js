@@ -11,7 +11,8 @@ const app = express()
 const port = 3000
 
 const apiUrl = 'http://api.openweathermap.org/data/2.5/weather'
-const apiKey = '7072edc8ba7df4103c3a2efc6061be00'
+// the api key is in the .env file
+const apiKey = process.env.API_KEY
 // creating endpoint, to return something
 app.get('/', (request, response) => {
     response.set("Access-Control-Allow-Origin", "*")
