@@ -21,7 +21,7 @@ export default {
       weather: null
     })
 
-    const apiUrl = 'https://localhost:3000'
+    const apiUrl = 'https://localhost:3000/'
     const apiKey = '7072edc8ba7df4103c3a2efc6061be00'
 
     const getWeather = () => {
