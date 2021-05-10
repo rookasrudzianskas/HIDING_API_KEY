@@ -4,10 +4,10 @@
     <div class="enter-city">
       <input @keyup.enter="getWeather" v-model="data.city" type="text" placeholder="Enter a city">
     </div>
-    <div class="weather">
-      <h1>6&deg;</h1>
-      <h2>Cloudy</h2>
-      <h3>Loads of clouds</h3>
+    <div v-if="data.weather" class="weather">
+      <h1>{{ Math.round(data.weather.main.temp)}}&deg;</h1>
+      <h2>{{data.weather.weather[0].main}}</h2>
+      <h3>{{data.weather.weather[0].description}}</h3>
     </div>
   </div>
 </template>
@@ -17,13 +17,17 @@ import axios from "axios"
 export default {
   setup() {
     let data = reactive({
-      city: '',
+      city: 'london',
       weather: null
     })
 
+    const apiUrl = 'http://api.openweathermap.org/data/2.5/weather'
+    const apiKey = '7072edc8ba7df4103c3a2efc6061be00'
+
     const getWeather = () => {
-      axios('http://api.openweathermap.org/data/2.5/weather?units=metric&q=london&appid=7072edc8ba7df4103c3a2efc6061be00').then(response => {
-        console.log(response);
+      axios(`${apiUrl}?units=metric&q=${data.city}&appid=${apiKey}`).then(response => {
+        data.weather = response.data
+        console.log(data.weather)
       })
     }
 
