@@ -6,10 +6,13 @@ const app = express()
 const port = 3000
 
 // const apiUrl = 'http://api.openweathermap.org/data/2.5/weather'
-// const apiKey = '7072edc8ba7df4103c3a2efc6061be00'
+const apiKey = '7072edc8ba7df4103c3a2efc6061be00'
 // creating endpoint, to return something
 app.get('/', (request, response) => {
-    console.log(request.query)
+    // console.log(request.query)
+    let query = request.query
+    query.appid = apiKey
+    console.log(query)
 })
 
 // launching app on specified port
