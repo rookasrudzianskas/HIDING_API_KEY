@@ -22,10 +22,10 @@ export default {
     })
 
     const apiUrl = 'http://localhost:3000/'
-    const apiKey = '7072edc8ba7df4103c3a2efc6061be00'
+
 
     const getWeather = () => {
-      axios(`${apiUrl}?units=metric&q=${data.city}&appid=${apiKey}`).then(response => {
+      axios(`${apiUrl}?units=metric&q=${data.city}`).then(response => {
         data.weather = response.data
         console.log(data.weather)
       })
