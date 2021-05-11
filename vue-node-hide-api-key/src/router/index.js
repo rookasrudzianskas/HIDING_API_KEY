@@ -29,7 +29,12 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   console.log(to)
-  document.title = `${process.env.VUE_APP_TITLE} - ${ to.name }`
+  let documentTitle = `${process.env.VUE_APP_TITLE} - ${ to.name }`
+  // if the title exsists, get it and display too
+  if(to.params.title){
+    documentTitle +=` - ${to.params.title}`
+  }
+  document.title = documentTitle
   next();
 })
 

@@ -12,21 +12,21 @@
     <ul>
       <li>
         <router-link style="text-decoration: none; color: #2c3e50"
-                     :to="{name: 'Post', params: { id: 1} }">
+                     :to="{name: 'Post', params: { id: 1, title: 'My first post'} }">
           Link to the blog post 1
         </router-link>
       </li>
 
       <li>
         <router-link style="text-decoration: none; color: #2c3e50"
-                     :to="{name: 'Post', params: { id: 2} }">
+                     :to="{name: 'Post', params: { id: 2, title: 'My second post'} }">
           Link to the blog post 2
         </router-link>
       </li>
 
       <li>
         <router-link style="text-decoration: none; color: #2c3e50"
-                     :to="{name: 'Post', params: { id: 3} }">
+                     :to="{name: 'Post', params: { id: 3 , title: 'My third post'} }">
           Link to the blog post 3
         </router-link>
       </li>
