@@ -13,7 +13,21 @@
       <li>
         <router-link style="text-decoration: none; color: #2c3e50"
                      :to="{name: 'Post', params: { id: 1} }">
-          Link to the blog post
+          Link to the blog post 1
+        </router-link>
+      </li>
+
+      <li>
+        <router-link style="text-decoration: none; color: #2c3e50"
+                     :to="{name: 'Post', params: { id: 2} }">
+          Link to the blog post 2
+        </router-link>
+      </li>
+
+      <li>
+        <router-link style="text-decoration: none; color: #2c3e50"
+                     :to="{name: 'Post', params: { id: 3} }">
+          Link to the blog post 3
         </router-link>
       </li>
     </ul>
@@ -64,6 +78,7 @@ export default {
 
 .home > ul li
   list-style-type: none !important
+  padding: 0
 
 </style>
 
