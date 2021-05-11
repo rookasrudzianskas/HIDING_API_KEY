@@ -8,7 +8,7 @@ const axios = require('axios')
 // setting the app
 const app = express()
 // and opening it on this port
-const port = 3000
+const port = 3001
 
 const apiUrl = 'http://api.openweathermap.org/data/2.5/weather'
 // the api key is in the .env file
@@ -27,7 +27,7 @@ app.get('/', (request, response) => {
     // we make the api request to the weathere site with the following strings
     axios(`${apiUrl}?${queryString}`).then(res => {
         response.send(res.data);
-    })
+    }).catch()
 })
 
 // launching app on specified port

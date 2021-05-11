@@ -21,7 +21,7 @@ export default {
       weather: null
     })
 
-    const apiUrl = 'http://localhost:3000/'
+    const apiUrl = 'http://localhost:3001/'
 
 
     const getWeather = () => {
