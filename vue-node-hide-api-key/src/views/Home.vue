@@ -9,7 +9,16 @@
       <h2>{{data.weather.weather[0].main}}</h2>
       <h3>{{data.weather.weather[0].description}}</h3>
     </div>
+    <ul>
+      <li>
+        <router-link style="text-decoration: none; color: #2c3e50"
+                     :to="{name: 'Post', params: { id: 1} }">
+          Link to the blog post
+        </router-link>
+      </li>
+    </ul>
   </div>
+
 </template>
 <script>
 import { reactive } from "vue"
@@ -52,5 +61,9 @@ export default {
     font-size: 80px
   h1, h2, h3
    margin: 0
+
+.home > ul li
+  list-style-type: none !important
+
 </style>
 
